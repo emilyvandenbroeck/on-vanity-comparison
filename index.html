@@ -115,32 +115,17 @@ tw-sidebar
  });
  $(&#39;map&#39;).imageMapResize();
  
-const visitedChildhood = window.story.state.variables.visitedChildhood;
-const visitedAdolescence = window.story.state.variables.visitedAdolescence;
+ (if: $visitedChildhood)[
+  [[adolescence]]
+]
 
-$areas.each(function () {
-const alt  = $(this).attr(&#39;alt&#39;);
-if (alt === &#39;childhood&#39;) {
-$(this).css(&#39;pointer-events&#39;, &#39;auto&#39;).css(&#39;opacity&#39;, &#39;1&#39;);
-}
-if (alt === &#39;adolescnce&#39; &amp;&amp; visitedChildhood) {
-$(this).css(&#39;pointer.events&#39;, &#39;auto&#39;).css(&#39;opacity&#39;, &#39;1&#39;);
-}
-if (alt === &#39;adulthood &amp;&amp; visitedChildhood &amp;&amp; visitedAdolescence)
-$(this).css(&#39;pointer-events&#39;, &#39;auto&#39;).css(&#39;opacity&#39;, &#39;1&#39;);
-}
-});
-
-$(&#39;area&#39;).on(&#39;click&#39;, function (e) {
-e.preventDefault();
-window.story.show($(this).attr(&#39;alt&#39;));
-});
+(if: $vistedAdolescence)[
+ [[adulthood]]
+ ]
 &lt;/script&gt;
 
 &lt;div style=&quot;display:none;&quot;
 [[childhood]]
-[[adolescence]]
-[[adulthood]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="childhood" tags="" position="475,625" size="100,100">(set: $visitedChildhood to true)
 [[Back to timeline|timeline]]
 
