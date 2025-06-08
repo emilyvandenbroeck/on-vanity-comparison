@@ -108,20 +108,48 @@ tw-sidebar
     &lt;area target=&quot;&quot; alt=&quot;adulthood&quot; title=&quot;adulthood&quot; href=&quot;&quot; coords=&quot;1462,553,1471,512,1494,476,1528,458,1559,448,1591,441,1618,439,1644,444,1672,453,1713,468,1733,490,1752,521,1755,544,1750,575,1740,588,1733,604,1716,621,1684,639,1652,648,1632,654,1608,654,1581,653,1557,649,1537,643,1513,627,1493,615,1472,592,1464,576&quot; shape=&quot;poly&quot;&gt;
 &lt;/map&gt;
 
- &lt;script&gt;
- $(&#39;area&#39;).on(&#39;click&#39;, function(e){
-   e.preventDefault();
-   Harlowe.goto(this.alt);
- });
- $(&#39;map&#39;).imageMapResize();
- 
- (if: $visitedChildhood)[
-  [[adolescence]]
-]
+&lt;script&gt;
+$(document).ready(function () {
+  $(&#39;map&#39;).imageMapResize();
 
-(if: $vistedAdolescence)[
- [[adulthood]]
- ]
+  // Access Twine (Harlowe) variables
+  const vars = window.story.state.variables;
+  const visitedChildhood = vars.visitedChildhood;
+  const visitedAdolescence = vars.visitedAdolescence;
+
+  // Disable all areas by default
+  $(&#39;area&#39;).css({
+    &#39;pointer-events&#39;: &#39;none&#39;,
+    &#39;opacity&#39;: &#39;0.4&#39;
+  });
+
+  // Enable areas based on visited flags
+  $(&#39;area[alt=&quot;childhood&quot;]&#39;).css({
+    &#39;pointer-events&#39;: &#39;auto&#39;,
+    &#39;opacity&#39;: &#39;1&#39;
+  });
+
+  if (visitedChildhood) {
+    $(&#39;area[alt=&quot;adolescence&quot;]&#39;).css({
+      &#39;pointer-events&#39;: &#39;auto&#39;,
+      &#39;opacity&#39;: &#39;1&#39;
+    });
+  }
+
+  if (visitedChildhood &amp;&amp; visitedAdolescence) {
+    $(&#39;area[alt=&quot;adulthood&quot;]&#39;).css({
+      &#39;pointer-events&#39;: &#39;auto&#39;,
+      &#39;opacity&#39;: &#39;1&#39;
+    });
+  }
+
+  // Handle click to move to passages
+  $(&#39;area&#39;).on(&#39;click&#39;, function (e) {
+    e.preventDefault();
+    const target = $(this).attr(&#39;alt&#39;);
+    window.story.show(target); // equivalent to Harlowe.goto
+  });
+});
 &lt;/script&gt;
 
 &lt;div style=&quot;display:none;&quot;
