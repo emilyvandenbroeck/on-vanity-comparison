@@ -9,41 +9,40 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play on vanity and the art of comparison.</tw-noscript></noscript></tw-story>
-<tw-storydata name="on vanity and the art of comparison" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="8CDC76D3-77AB-455B-AD17-B5139BA55E43" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage[tags~="imagemap"] {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-  tw-passage[tags~="imagemap"] img {
-    max-width: 100% !important;
-    max-height: calc(90vh - 2cm) !important; /* You can also change this figure to just 90vh */
-    object-fit: contain !important;
-    margin: 0 auto 0 auto !important;
-    padding: 0 !important;
-    display: block !important;
-  }
+<tw-storydata name="on vanity and the art of comparison" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="8CDC76D3-77AB-455B-AD17-B5139BA55E43" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">html, body, tw-story, tw-passage {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-tw-passage[tags~="imagemap"] {
+tw-story {
+  font-family: 'Playfair Display', serif;
+  color: #e6d9c1;
   background-color: #470909;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  margin-right: 0 !important;
+  padding-right: 0 !important;
 }
 
-tw-link {
-  color: #FFFFFF !important;
-  text-decoration: none;
+tw-hook[name="centerbox"] {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
 }
 
-tw-link:hover {
-  color: #e6d9c1 !important;
-  text-decoration: none;
+tw-hook[name="middle"] {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
 }
-
-tw-hook[name="lifestage-area"] tw-link {
-  color: #470909;
-}
-
-tw-hook[name="lifestage-area"] tw-link: hover {
-  color: #802727;
-}
-
+  
 body [tags~="imagemap"] {
   margin: 0;
   padding: 0;
@@ -61,14 +60,14 @@ img.top-banner [tags~="imagemap"] {
   padding: 0;
 }
 
-tw-story {
-  font-family: 'Playfair Display', serif;
+tw-link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+tw-link:hover {
   color: #e6d9c1;
-  background-color: #470909;
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-  margin-right: 0 !important;
-  padding-right: 0 !important;
+  text-decoration: none;
 }
 
 tw-sidebar
@@ -80,6 +79,36 @@ tw-sidebar
   font-size: 48px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0em; 
+}
+
+tw-passage[tags~="imagemap"] {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  tw-passage[tags~="imagemap"] img {
+    max-width: 100% !important;
+    max-height: calc(90vh - 2cm) !important;
+    object-fit: contain !important;
+    margin: 0 auto 0 auto !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+tw-passage[tags~="imagemap"] {
+  background-color: #470909;
+}
+
+tw-passage[tags~="lifestage"] tw-link {
+  color: #470909 !important;
+}
+
+tw-passage[tags~="lifestage"] tw-link:hover {
+  color: #802727 !important;
+}
+
 tw-story[tags~="lifestage"] {
   background-image: url(./images/background.jpg);
   background-size: cover; 
@@ -88,8 +117,33 @@ tw-story[tags~="lifestage"] {
 
 tw-passage[tags~="lifestage"] {
   font-family: 'Playfair Display', serif;
+  font-size: 36px;
   color: black;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! Image Map Resizer (imageMapResizer.min.js ) - v1.0.10 - 2019-04-10
+}
+
+tw-story[tags~="contents"] {
+  background-image: url(./images/contents.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+tw-passage[tags~="contents"] {
+  font-family: 'Playfair Display', serif;
+  color: #470909;
+}
+
+tw-passage[tags~="contents"] tw-link {
+  color: #802727 !important;
+}
+
+tw-passage[tags~="contents"] tw-link:hover {
+  color: #470909 !important;
+}
+
+tw-passage[tags~="contents"] {
+  line-height: 1.7;
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! Image Map Resizer (imageMapResizer.min.js ) - v1.0.10 - 2019-04-10
  *  Desc: Resize HTML imageMap to scaled image.
  *  Copyright: (c) 2019 David J. Bradshaw - dave@bradshaw.net
  *  License: MIT
@@ -100,7 +154,7 @@ tw-passage[tags~="lifestage"] {
 
 // Harlowe Macro Framework, by Chapel; version 1.0.2
 ;!function(){"use strict";var r={major:1,minor:0,patch:2},e=[r.major,r.minor,r.patch].join(".");r.semantic=e,r=Object.freeze(r);var t=$("tw-storydata"),a=Object.freeze({name:t.attr("name"),ifid:t.attr("ifid")}),n=t.attr("format-version"),o=n.split("."),i=Object.freeze({major:o[0],minor:o[1],patch:o[2],semantic:n});window.Harlowe=window.Harlowe||{},window.Harlowe=Object.assign(window.Harlowe,{framework:r,API_ACCESS:Object.freeze({MACROS:require("macros"),STATE:require("state"),CHANGER:require("datatypes/changercommand"),ENGINE:require("engine")}),engine:i,story:a})}(),function(){"use strict";function e(r){return"number"==typeof r||"boolean"==typeof r||"string"==typeof r||null===r||Array.isArray(r)&&r.every(e)||r instanceof Set&&Array.from(r).every(e)||r instanceof Map&&Array.from(r.values()).every(e)||_changer.isPrototypeOf(r)}window.Harlowe=Object.assign(window.Harlowe,{helpers:{isSerialisable:e,isSerializable:e,arrayify:function(r,e){if(r){var t=[].slice.call(r);return void 0!==e&&(t=t.slice(e)),t}},getPassageData:function(r){var e=$('tw-passagedata[name="'+r+'"]');if(e[0])return e}}})}(),function(){"use strict";var n=window.localStorage||!1,o=Harlowe.story.ifid+"-tw-storage";function r(){try{if(!n)throw new Error("storage is inaccessible");n.setItem(o,JSON.stringify({ifid:Harlowe.story.ifid}))}catch(r){console.warn(r)}}function i(r){try{var e;if(n)return e=JSON.parse(n.getItem(o)),r&&r&&"string"==typeof r?e[r]:e;throw new Error("storage is inaccessible")}catch(r){console.warn(r)}}null==i()&&r(),Harlowe.storage={clear:r,save:function(r,e){try{if(!r||"string"!=typeof r)throw new TypeError("cannot store values without a valid storage key");if(void 0===e)throw new TypeError("cannot store undefined values");var t={};if(t[r]=e,!n)throw new Error("storage is inaccessible");var a=i();Object.assign(a,t),n.setItem(o,JSON.stringify(a))}catch(r){console.warn(r)}},load:i,remove:function(r){try{if(!r||"string"!=typeof r)throw new TypeError("cannot store values without a valid storage key");if(!n)throw new Error("storage is inaccessible");var e=i();e.hasOwnProperty(r)&&(delete e[r],n.setItem(o,JSON.stringify(e)))}catch(r){console.warn(r)}}}}(),function(){"use strict";function a(r,e,t){if(!(this instanceof a))return new a(r,e,t);this.name=r||"unknown",this.args=e||[],this.data=t||{},this.type=t&&t.type||"basic",this.fn=t&&t.fn||"handler","changer"===this.type&&("handler"===this.fn?this.instance=t&&t.instance||null:this.descriptor=t&&t.descriptor||null)}a.create=function(r,e,t){if(!r||"string"!=typeof r||!r.trim())throw new TypeError("Invalid macro name.");return e&&e instanceof Array||(e=[]),t&&"object"==typeof t||(t={type:"basic",fn:"handler"}),new a(r,e,t)},Object.assign(a.prototype,{clone:function(){return a.create(this.name,this.args,this.data)},syntax:function(){return"("+this.name+":)"},error:function(r,e){var t="Error in the "+this.syntax()+" macro: "+r;return e&&alert(t),console.warn("HARLOWE CUSTOM MACRO ERROR -> ",t),new Error(r)},typeCheck:function(r){r&&r instanceof Array||(r=Harlowe.helpers.arrayify(arguments));var n=this,o=[];if(r.forEach(function(r,e){var t=e+1,a=[];"string"==typeof r&&("any"===(a=r.includes("|")?r.split("|").map(function(r){return r.trim().toLowerCase()}):[r.trim().toLowerCase()])[0]||a.some(function(r){return typeof n.args[e]===r})||o.push("argument "+t+" should be a(n) "+a.join(" or ")))}),o.length)return n.error(o.join("; "))}}),window.Harlowe=Object.assign(window.Harlowe,{MacroContext:a})}(),function(){"use strict";var c=Harlowe.API_ACCESS.MACROS,l=Harlowe.API_ACCESS.CHANGER;window.Harlowe=Object.assign(window.Harlowe||{},{macro:function(r,e,t){if(!r||"string"!=typeof r||!r.trim())throw new TypeError("Invalid macro name.");if(!e||"function"!=typeof e)throw new TypeError("Invalid macro handler.");var a,n,o,i,s;t&&"function"==typeof t?(o=r,i=e,s=t,c.addChanger(o,function(){var r=Harlowe.helpers.arrayify(arguments,1),e=l.create(o,r),t=Harlowe.MacroContext.create(o,r,{type:"changer",fn:"handler",instance:e});return i.apply(t,r),e},function(){var r=Harlowe.helpers.arrayify(arguments),e=r.shift(),t=Harlowe.MacroContext.create(o,r,{type:"changer",fn:"changer",descriptor:e});s.apply(t,r)},c.TypeSignature.zeroOrMore(c.TypeSignature.Any))):(a=r,n=e,c.add(a,function(){var r=Harlowe.helpers.arrayify(arguments,1),e=Harlowe.MacroContext.create(a,r,{type:"basic",fn:"handler"}),t=n.apply(e,r);return null==t?"":t},c.TypeSignature.zeroOrMore(c.TypeSignature.Any)))}})}(),function(){"use strict";var t=Harlowe.API_ACCESS.STATE,e=Harlowe.API_ACCESS.ENGINE;function a(){return t.passage}window.Harlowe=Object.assign(window.Harlowe||{},{passage:a,tags:function(r){r=r||a();try{var e=Harlowe.helpers.getPassageData(r).attr("tags");return e?e.split(" "):[]}catch(r){return console.warn(r.message),[]}},goto:function(r){return e.goToPassage(r)},variable:function(r,e){if("$"!==r[0])throw new Error('cannot access variable "'+r+'"');if(r=r.substr(1),void 0!==e){if(!Harlowe.helpers.isSerialisable(e))throw new Error('The value passed to variable "'+r+'" cannot be serialized.');t.variables[r]=e}return t.variables[r]},visited:function(r){return t.passageNameVisited(r||a())},hasVisited:function(r){return 0<t.passageNameVisited(r||a())},turns:function(){return t.pastLength}})}();
-// end Harlowe Macro Framework</script><tw-tag name="imagemap" color="red"></tw-tag><tw-tag name="timeline" color="orange"></tw-tag><tw-tag name="lifestage" color="purple"></tw-tag><tw-passagedata pid="1" name="Untitled Passage" tags="imagemap" position="600,250" size="100,100">&lt;!-- Image Map Generated by http://www.image-map.net/ --&gt;
+// end Harlowe Macro Framework</script><tw-tag name="imagemap" color="red"></tw-tag><tw-tag name="timeline" color="orange"></tw-tag><tw-tag name="lifestage" color="purple"></tw-tag><tw-tag name="contents" color="blue"></tw-tag><tw-passagedata pid="1" name="Untitled Passage" tags="imagemap" position="600,250" size="100,100">&lt;!-- Image Map Generated by http://www.image-map.net/ --&gt;
 &lt;img src=&quot;./images/title.jpg&quot; class=&quot;top-banner&quot; usemap=&quot;#image-map&quot;&gt; 
 
 
@@ -142,31 +196,62 @@ tw-passage[tags~="lifestage"] {
 [[childhood]]
 [[adolescence]] 
 [[adulthood]] 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="childhood" tags="lifestage" position="475,625" size="100,100">
-
-
-
-
-
-
-
-
-|lifestage-area&gt;[
-  (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[
-    &lt;span class=&quot;large-text&quot;&gt;welcome to [[[childhood.|contentschildhood]]]&lt;/span&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="childhood" tags="lifestage" position="475,625" size="100,100">|centerbox&gt;[
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[
+   welcome to [[childhood.|contentschildhood]]
   ]
-]
-</tw-passagedata><tw-passagedata pid="5" name="adolescence" tags="lifestage" position="600,625" size="100,100">|lifestage-area&gt;[
+  ]</tw-passagedata><tw-passagedata pid="5" name="adolescence" tags="lifestage" position="600,625" size="100,100">|centerbox&gt;[
   (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[
     &lt;span class=&quot;large-text&quot;&gt;welcome to [[[adolescence.|contentsadolescence]]]&lt;/span&gt;
   ]
-]
-</tw-passagedata><tw-passagedata pid="6" name="adulthood" tags="lifestage" position="725,625" size="100,100">|lifestage-area&gt;[
+]</tw-passagedata><tw-passagedata pid="6" name="adulthood" tags="lifestage" position="725,625" size="100,100">|centerbox&gt;[
   (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[
     &lt;span class=&quot;large-text&quot;&gt;welcome to [[[adulthood.|contentsadulthood]]]&lt;/span&gt;
   ]
 ]
-</tw-passagedata><tw-passagedata pid="7" name="contentsadolescence" tags="" position="662.5,750" size="100,100">(align:&quot;==&gt;&quot;)[[[back to timeline|timeline]]]</tw-passagedata><tw-passagedata pid="8" name="contentschildhood" tags="" position="475,750" size="100,100">[[back to timeline|timeline]](align:&quot;==&gt;&quot;)[Your Text Here]</tw-passagedata><tw-passagedata pid="9" name="contentsadulthood" tags="" position="850,750" size="100,100">(align:&quot;==&gt;&quot;)[[[back to timeline|timeline]]]</tw-passagedata></tw-storydata>
+
+
+</tw-passagedata><tw-passagedata pid="7" name="contentsadolescence" tags="" position="662.5,750" size="100,100">|middle&gt;[
+
+&lt;h3&gt;contents&lt;/h3&gt;
+[[love? p.1]]
+[[self-perception p.3]]
+[[outside-perception p.1]]
+[[self-perception p.4]]
+[[love? p.2]]
+[[love? p. 3]]
+[[self-perception p.5]]
+
+
+[[back to timeline|timeline]]
+
+]</tw-passagedata><tw-passagedata pid="8" name="contentschildhood" tags="contents" position="475,750" size="100,100">|middle&gt;[
+
+&lt;h3&gt;contents&lt;/h3&gt;
+[[falling behind p.1]]
+[[possession comparison p.1]]
+[[self-perception p.1]]
+[[birthdays p.1]]
+[[self-perception p.2]]
+[[possession comparison p.2]]
+
+
+[[back to timeline|timeline]]
+
+]</tw-passagedata><tw-passagedata pid="9" name="contentsadulthood" tags="" position="850,750" size="100,100">|middle&gt;[
+
+&lt;h3&gt;contents&lt;/h3&gt;
+[[falling behind p.2]] (click-replace: &quot;falling behind&quot;) [[love? p.4]] (click-replace: &quot;love? p.4&quot;) [[self-perception p.6]]
+[[possession comparison p.1]]
+[[self-perception p.1]]
+[[birthdays p.1]]
+[[self-perception p.2]]
+[[possession comparison p.2]]
+
+
+[[back to timeline|timeline]]
+
+]</tw-passagedata><tw-passagedata pid="10" name="falling behind p.1" tags="" position="475,875" size="100,100"></tw-passagedata><tw-passagedata pid="11" name="possession comparison p.1" tags="" position="600,875" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="self-perception p.1" tags="" position="350,875" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="birthdays p.1" tags="" position="475,1000" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="self-perception p.2" tags="" position="600,1000" size="100,100"></tw-passagedata><tw-passagedata pid="15" name="possession comparison p.2" tags="" position="350,1000" size="100,100"></tw-passagedata><tw-passagedata pid="16" name="love? p.1" tags="" position="787.5,875" size="100,100"></tw-passagedata><tw-passagedata pid="17" name="self-perception p.3" tags="" position="787.5,1000" size="100,100"></tw-passagedata><tw-passagedata pid="18" name="outside-perception p.1" tags="" position="662.5,1125" size="100,100"></tw-passagedata><tw-passagedata pid="19" name="self-perception p.4" tags="" position="787.5,1125" size="100,100"></tw-passagedata><tw-passagedata pid="20" name="love? p.2" tags="" position="537.5,1125" size="100,100"></tw-passagedata><tw-passagedata pid="21" name="love? p. 3" tags="" position="662.5,1250" size="100,100"></tw-passagedata><tw-passagedata pid="22" name="self-perception p.5" tags="" position="787.5,1250" size="100,100"></tw-passagedata><tw-passagedata pid="23" name="falling behind p.2" tags="" position="975,875" size="100,100"></tw-passagedata><tw-passagedata pid="24" name="love? p.4" tags="" position="975,1000" size="100,100"></tw-passagedata><tw-passagedata pid="25" name="self-perception p.6" tags="" position="975,1125" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
