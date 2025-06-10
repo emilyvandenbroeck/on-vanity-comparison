@@ -69,8 +69,30 @@ tw-sidebar
 }
 
 .large-text {
-  font-size: 24px;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! Image Map Resizer (imageMapResizer.min.js ) - v1.0.10 - 2019-04-10
+  font-size: 48px;
+}
+
+tw-story[tags~="lifestage"] {
+  background-image: url(./images/background.jpg);
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+
+tw-passage[tags~="lifestage"] {
+  font-family: 'Playfair Display', serif;
+  color: black;
+}
+  
+tw-link [tags~="lifestage"] {
+  color: #470909;
+  text-decoration: none;
+}
+
+tw-link:hover [tags~="lifestage"] {
+  color: #802727;
+  text-decoration: none;
+}
+  </style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! Image Map Resizer (imageMapResizer.min.js ) - v1.0.10 - 2019-04-10
  *  Desc: Resize HTML imageMap to scaled image.
  *  Copyright: (c) 2019 David J. Bradshaw - dave@bradshaw.net
  *  License: MIT
@@ -123,16 +145,33 @@ tw-sidebar
 [[childhood]]
 [[adolescence]] 
 [[adulthood]] 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="childhood" tags="lifestage" position="475,625" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[&lt;span class=&quot;large-text&quot;&gt;welcome to childhood.&lt;/span&gt;]
-
-(align:&quot;==&gt;&quot;)[[[enter|contentschildhood]]]
-</tw-passagedata><tw-passagedata pid="5" name="adolescence" tags="" position="600,625" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[&lt;span class=&quot;large-text&quot;&gt;welcome to adolescence.&lt;/span&gt;]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="childhood" tags="lifestage" position="475,625" size="100,100">
 
 
-(align:&quot;==&gt;&quot;)[[[enter|contentsadolescence]]]
-</tw-passagedata><tw-passagedata pid="6" name="adulthood" tags="" position="725,625" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[&lt;span class=&quot;large-text&quot;&gt;welcome to adulthood.&lt;/span&gt;]
 
-[[enter|contentsadulthood]]</tw-passagedata><tw-passagedata pid="7" name="contentsadolescence" tags="" position="662.5,750" size="100,100">[[back to timeline|timeline]]</tw-passagedata><tw-passagedata pid="8" name="contentschildhood" tags="" position="475,750" size="100,100">[[back to timeline|timeline]]</tw-passagedata><tw-passagedata pid="9" name="contentsadulthood" tags="" position="850,750" size="100,100">(align:&quot;==&gt;&quot;)[[[back to timeline|timeline]]]</tw-passagedata></tw-storydata>
+
+
+
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[&lt;span class=&quot;large-text&quot;&gt;welcome to [[childhood|contentschildhood]].&lt;/span&gt;]
+
+</tw-passagedata><tw-passagedata pid="5" name="adolescence" tags="lifestage" position="600,625" size="100,100">
+
+
+
+
+
+
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[&lt;span class=&quot;large-text&quot;&gt;welcome to [[adolescence|contentsadolescence]].&lt;/span&gt;]
+
+</tw-passagedata><tw-passagedata pid="6" name="adulthood" tags="lifestage" position="725,625" size="100,100">
+
+
+
+
+
+
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[&lt;span class=&quot;large-text&quot;&gt;welcome to [[adulthood|contentsadulthood]].&lt;/span&gt;]
+</tw-passagedata><tw-passagedata pid="7" name="contentsadolescence" tags="" position="662.5,750" size="100,100">(align:&quot;==&gt;&quot;)[[[back to timeline|timeline]]]</tw-passagedata><tw-passagedata pid="8" name="contentschildhood" tags="" position="475,750" size="100,100">[[back to timeline|timeline]](align:&quot;==&gt;&quot;)[Your Text Here]</tw-passagedata><tw-passagedata pid="9" name="contentsadulthood" tags="" position="850,750" size="100,100">(align:&quot;==&gt;&quot;)[[[back to timeline|timeline]]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
