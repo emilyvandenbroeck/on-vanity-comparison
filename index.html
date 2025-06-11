@@ -15,6 +15,13 @@
   padding: 0;
 }
 
+span.fixedlink {
+  display: inline-block;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
 tw-story {
   font-family: 'Playfair Display', serif;
   color: #e6d9c1;
@@ -151,7 +158,6 @@ tw-link[tags~="contents"] {
 tw-passage[tags~="contents"] tw-enchantment.link.enchantment-link {
   color: #802727 !important;
   font-weight: normal;
-  line-height; 1.1;
   margin: 0;
   padding: 0;
   display: block;
@@ -160,10 +166,27 @@ tw-passage[tags~="contents"] tw-enchantment.link.enchantment-link {
 tw-passage[tags~="contents"] tw-enchantment.link.enchantment-link:hover {
   color: #470909 !important;
   font-weight: normal;
-  line-height; 1.1;
   margin: 0;
   padding: 0;
   display: block;
+}
+
+tw-enchantment.link.enchantment-link {
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+  white-space: nowrap;
+}
+
+tw-enchantment.link.enchantment-link:hover {
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+  white-space: nowrap;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! Image Map Resizer (imageMapResizer.min.js ) - v1.0.10 - 2019-04-10
  *  Desc: Resize HTML imageMap to scaled image.
  *  Copyright: (c) 2019 David J. Bradshaw - dave@bradshaw.net
@@ -262,6 +285,7 @@ tw-passage[tags~="contents"] tw-enchantment.link.enchantment-link:hover {
 ]</tw-passagedata><tw-passagedata pid="9" name="contentsadulthood" tags="contents" position="975,675" size="100,100">|middle&gt;[
 
 &lt;h3&gt;contents&lt;/h3&gt;
+
 |link1&gt;[falling behind p.2] (click-replace: ?link1)[  |link1&gt;[love? p.4] (click-replace: ?link1)[(link-goto: &quot;self-perception p.6&quot;, &quot;self-perception p.6&quot;) ]]
 [[self-perception p.7]]
 |link2&gt;[love? p.5] (click-replace: ?link2)[(link-goto: &quot;self-perception p.8&quot;, &quot;self-perception p.8&quot;)]
